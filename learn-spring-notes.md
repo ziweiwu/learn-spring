@@ -89,3 +89,26 @@ Spring Bean Scopes
 
 Bean lifecycle 
 - Container started -> Bean Instantiated -> Dependencies Injected -> Internal Spring Processing -> Init Method
+- Can add custom code during bean initialization and bean destruction 
+- Spring doesn't call destroy method for prototype bean
+- Spring calls init method for all types of beans
+
+Java Annotations 
+- Special labels/markers added to java classes 
+- provides meta-data about the class 
+- processed at compile time or run-time for special processing 
+- `Override` tell compiler we are overriding a method
+
+Development process for Java Annotations 
+1. Enable Component Scanning in spring config file 
+2. Add the @Component annotation to your java classes
+3. Retrieve bean from spring container
+
+
+Dependency injection by autowiring
+- @autowire annotation allows dependency injection
+- Constructor injection
+- Setter injection
+- Field injection
+
+
