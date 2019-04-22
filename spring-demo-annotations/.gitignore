@@ -2,4 +2,4 @@
 /out
 .jar
 .idea*
-.iml
+spring-demo-annotations.iml
