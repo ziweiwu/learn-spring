@@ -159,24 +159,100 @@ What is Spring MVC?
 - Based on Model-View-Controller design pattern
 - Leverage features of the Core Spring Framework(IoC, DI)
 
-Benefits of Spring MVC 
-- Spring way of building web app UIs in Java 
-- Leverage a set of reusable UI components 
-- Help manage application state for web requests 
-- Process form data: validation, conversion etc 
+Benefits of Spring MVC
+
+- Spring way of building web app UIs in Java
+- Leverage a set of reusable UI components
+- Help manage application state for web requests
+- Process form data: validation, conversion etc
 - Flexible configuration for the view layer
 
-Flow of information 
+Flow of information
+
 - Web Browser -> Front Controller -> Model -> Controller -> Model -> View Template -> Web Browser
 
+Components of a Spring MVC Application
 
-Components of a Spring MVC Application 
 - A set of web pages to layout UI components
 - A collection of Spring beans (controller, services, etc...)
 - Spring configuration (XML, annotations or Java)
 
 Front Controller
-- known as DispatcherServlet: part of Spring framework, developed by Spring Dev Team
-- receive a HTTP request
 
+- Known as DispatcherServlet: part of Spring framework, developed by Spring Dev Team
+- Receive a HTTP request
+
+Steps to create controller and view
+
+1. Create controller class
+2. Define controller method
+3. Add request mapping to controller method
+4. Return view name
+5. Develop view page
+
+Spring MVC form tags
+
+- Form:form (main form container)
+- Form:input (text field)
+- Form:textarea (multi-line text field)
+- Form:checkbox (checkbox)
+- Form: radiobutton (radio buttons)
+- Form: select (drop down list)
+
+Sample MVC form development process
+
+1. Create model class
+2. Create controller class
+3. Create HTML form
+4. Create form processing code
+5. Create conformation page
+
+Validation
+
+- Spring version 4 and higher supports Bean Validation API
+
+Validation features
+
+- Required
+- Validate length
+- Validate numbers
+- Validate with regular expression
+- Custom validation
+
+Validation Annotations
+
+- @NotNull: check that the annotated value is not null
+- @Min: must be a number >= value
+- @Max: must be a number <= value
+- @Size: size must match the given size
+- @Pattern: must match a regular expression pattern
+- @Future / @Past: date must be in future or past of given date
+
+Hibernate Validator
+
+- A validation library fully compliant with Bean Validation API
+
+Sample development process for form validation
+
+1. Add validation rule to customer class
+2. Display error message on HTML form
+3. Perform validation in the controller class
+4. Update confirmation page
+
+
+Create a custom error message 
+1. Create the message in `src/resources/messages.properties`
+2. Load custom message in Spring config file `WebContent/WEB-INF/spring-mvc-demo-servlet.xml`
+
+Create custom validation 
+- Perform custom validation based on your business rules
+- We need to create an annotation rule from scatch
+
+What is Hibernate?
+- A framework for persisting / saving Java objects in a database
+
+Benefits of Hibernate? 
+1. Hibernates handles all of the low-level SQL
+2. Minimize the amount of JDBC code you have to develop 
+3. Provides object-relationship mapping (ORM)
 
